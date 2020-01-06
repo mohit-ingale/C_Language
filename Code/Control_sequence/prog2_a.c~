@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char ch;
+
+	printf("Enter a character from 'a','b','d','f':");
+	ch=getchar();
+
+	if(ch=='a'||ch=='A')
+		printf("A for APPLE\n");
+	else if(ch=='b'||ch=='B')
+		printf("B for BAT\n");
+	else if(ch=='d'||ch=='D')
+		printf("D for DOG\n");
+	else if(ch=='f'||ch=='F')
+		printf("F for FAN\n");
+	else
+		printf("Character not in range\n");
+
+}

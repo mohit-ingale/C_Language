@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+	char ch;
+
+	printf("Enter a character from 'a','b','d','f':");
+	ch=getchar();
+	ch=tolower(ch);
+	switch(ch)
+	{
+		case 'a':
+		{
+			printf("A for APPLE\n");
+			break;
+		}
+		case 'b':
+		{
+			printf("B for BAT\n");
+			break;
+		}
+		case 'd':
+		{
+			printf("D for DOG\n");
+			break;
+		}
+		case 'f':
+		{
+			printf("F for FAN\n");
+			break;
+		}
+		default:
+			printf("Entered character is not in range\n");
+	}
+}

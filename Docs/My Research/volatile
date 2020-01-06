@@ -1,0 +1,5 @@
+There are lot of uses case with volatile keyword in C. generally c compiler will do lot of optimization to our code to run fast on our device. while doing like that, 
+it may move some of the variables from memory to cpu registers because accessing registers will be faster than accessing memory. 
+similarly if compiler sees if some of the variables are not used by our code, then it may remove that variable from the code, 
+but that variable might be used by some outside environment code. To avoid such kind of mistakes we make that variable as volatile 
+if we don't want compiler to optimize the code which access that variable.

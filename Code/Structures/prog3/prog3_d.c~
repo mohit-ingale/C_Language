@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+void main()
+{
+	struct var
+	{
+		int a:8;
+		int b:6;
+		int c:5;
+	};
+	struct var v;
+	printf("Size of structure:%lu\n",sizeof(v));
+}
+

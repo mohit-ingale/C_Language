@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+int diff(int,int);
+int fact(int);
+int div(int,int);
+
+void main()
+{
+	int n=0,r=0,fac1,fac2,d;
+	printf("Enter value of n:");
+	scanf("%d",&n);
+	printf("Enter value of r:");
+	scanf("%d",&r);
+	fac1=fact(n);
+	fac2=fact(diff(n,r));
+	d=div(fac1,fac2);
+	printf("Ans: %d\n",d);
+}
+
+int diff(int n,int r)
+{
+	int dif=0;
+	dif=n-r;
+	return dif;
+}
+
+int fact(int a)
+{
+	int fac=a;
+	if(a==1)
+		return a;
+	else
+		fac=fac*fact(--a);
+	return fac;
+}
+
+int div(int a,int b)
+{
+	int d;
+	d=a/b;
+	return d;
+}
+

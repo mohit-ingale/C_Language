@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void main()
+{
+	float cms,incs;
+	int feet;
+	printf("Enter length in cms: ");
+	scanf("%f",&cms);
+	incs=cms/2.54;
+	feet=incs/12;
+	incs=((incs/12)-feet)*12;
+	printf("%.1f is %d feet and %.1f inches\n",cms,feet,incs);
+	
+
+}

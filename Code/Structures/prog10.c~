@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node{
+	int data;
+	struct node *next;
+};
+struct node* add_end(struct node *,int);
+void main()
+{
+	int n,x;
+	struct node *head;
+	head=NULL;
+	printf("enter 1 to add node,0 to exit");
+	while(1)
+	{
+		printf("\nenter choice: ");
+		scanf("%d",&n);
+		switch(n)
+		{
+		case 1:
+			printf("\nenter new data :");
+			scanf("%d",&x);
+			head=add_end(head,x);
+			continue;
+		case 0:
+			break;
+		}
+		break;
+		
+	}
+	printf("data at first node %d\n",head->data);
+}
+
+struct node* add_end(struct node *head,int x)
+{
+	struct node *trev,*temp;
+	temp=(struct node*)malloc(sizeof(struct node));
+	if(head==NULL)
+	{
+		temp->data=x;
+		temp->next=NULL;
+		return temp;
+	}
+	trev=head;
+	while(trev->next!=NULL)
+		trev=trev->next;
+	trev->next=temp;
+	temp->data=x;
+	temp->next=NULL;
+	return head;
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+	struct struct1
+	{
+		int n1;
+		char ch1;
+	}s;
+	union union1
+	{
+		int n2;
+		char ch2;
+	}u;
+	printf("the size of structure is %lu\nthe size of union is %lu\n",sizeof(s),sizeof(u));
+}

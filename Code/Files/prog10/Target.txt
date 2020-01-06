@@ -1,0 +1,5 @@
+	while(fgets(s,100,tfile)!=NULL)				//Print Target
+		printf("%s",s);
+	printf("\n");
+	fclose(tfile);
+}

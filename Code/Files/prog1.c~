@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void main()
+{
+	char ch;
+	char s[100];
+	int ct=0;
+	FILE *file1;
+	
+	file1=fopen("Sample.c","r+");
+	if(file1==NULL)
+	{
+		printf("Cannot open the file");
+		exit(1);
+	}
+	while(fgets(s,100,file1)!=NULL)
+		printf("%s",s);
+	printf("\n");
+	fclose(file1);
+}
